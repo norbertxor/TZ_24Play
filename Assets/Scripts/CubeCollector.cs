@@ -1,18 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CubeCollector : MonoBehaviour {
-   [SerializeField] private GameObject _parrent;
-   [SerializeField] private Animator _animator;
+   private bool _isCollected = false;
+   private bool _isObstacle = false;
 
    private void OnTriggerEnter(Collider other) {
-      if (other.CompareTag("Player")) {
-         _parrent.transform.localPosition += new Vector3(0,1f,0);
-         gameObject.transform.parent = _parrent.transform;
-         transform.localPosition = new Vector3(0f,_parrent.transform.position.y * -1f+0.5f,0f);
-         _animator.SetTrigger("Jump");
+
+      if (other.CompareTag("Obstacle") && !_isObstacle) {
+         _isObstacle = true;
+         transform.parent = null;
+         PlayerController.cubesToOut++;
+         PlayerController.collectedCubes--;
       }
+   }
+   public void SetCollectStatus(bool status) {
+      _isCollected = status;
+   }
+   public bool GetCollectStatus() {
+      return _isCollected;
    }
 }

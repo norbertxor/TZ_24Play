@@ -173,6 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _platformPrefab: {fileID: 8635103698508136598}
+  _obstaclePrefab: {fileID: 3298146576256067614, guid: 52257005b6f33034eb2466fc67189036, type: 3}
+  _collectPrefab: {fileID: 3481367610352654943, guid: 085ad57d0f0d5924f8ec77fd5eeb27f9, type: 3}
+  _parent: {fileID: 8635103698508136598}
 --- !u!1 &8635103698508136598
 GameObject:
   m_ObjectHideFlags: 0
