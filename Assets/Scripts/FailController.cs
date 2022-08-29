@@ -20,7 +20,7 @@ public class FailController : MonoBehaviour {
         if (_isLoose) {
             _end.SetActive(true);
             _bestScore.enabled = true;
-            _bestScore.text = "BEST SCORE\n<size=40>" + PlayerPrefs.GetInt("BestScore").ToString() + "</size>\nTRY DO BETTER!";
+            _bestScore.text = "BEST SCORE\n<size=40>" + PlayerPrefs.GetInt("BestScore").ToString() + "</size>\nTRY MAKE BETTER!";
         }
     }
     private void OnTriggerEnter(Collider other) {
