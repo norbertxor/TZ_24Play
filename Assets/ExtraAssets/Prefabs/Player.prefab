@@ -93,7 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parrent: {fileID: 522517016063730602}
-  speed: 5
+  _animator: {fileID: 5164739209848966065}
+  _collectVFX: {fileID: 0}
+  _scoreText: {fileID: 0}
+  _startText: {fileID: 0}
 --- !u!54 &510312495679145361
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -123,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3481367610352654943, guid: 085ad57d0f0d5924f8ec77fd5eeb27f9, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Finish
       objectReference: {fileID: 0}
     - target: {fileID: 7499209467646926844, guid: 085ad57d0f0d5924f8ec77fd5eeb27f9, type: 3}
       propertyPath: m_RootOrder
@@ -169,7 +172,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2210082736966618442, guid: 085ad57d0f0d5924f8ec77fd5eeb27f9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 085ad57d0f0d5924f8ec77fd5eeb27f9, type: 3}
 --- !u!4 &7885576064885773956 stripped
 Transform:
@@ -261,3 +265,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b5d591dbb72ac04a80d42bbb710cb7a, type: 3}
+--- !u!95 &5164739209848966065 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4279075403791194285, guid: 6b5d591dbb72ac04a80d42bbb710cb7a, type: 3}
+  m_PrefabInstance: {fileID: 8993269104018297628}
+  m_PrefabAsset: {fileID: 0}

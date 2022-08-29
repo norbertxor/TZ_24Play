@@ -15,7 +15,7 @@ public class CubeCollector : MonoBehaviour {
          _isObstacle = true;
          transform.parent = null;
          PlayerController.cubesToOut++;
-         PlayerController.collectedCubes--;
+         PlayerController.currentCubes--;
       }
    }
    public void SetCollectStatus(bool status) {
@@ -24,4 +24,6 @@ public class CubeCollector : MonoBehaviour {
    public bool GetCollectStatus() {
       return _isCollected;
    }
+   
+   
 }
